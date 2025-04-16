@@ -56,3 +56,6 @@ Error Code: 1452. Cannot add or update a child row: a foreign key constraint fai
 
 # ✅ Ejercicio 3: Concurrencia
 Ejercicio resuelto en clase
+
+## ✅ Ejercicio 8: Backup y Restore
+[![Ver Video](ruta/a/miniatura.png)](https://drive.google.com/file/d/1oiAQmr0HCLfbwzfjGojo1P8ca0gl6n2M/view?usp=sharing)
