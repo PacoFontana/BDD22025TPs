@@ -135,14 +135,20 @@ La creación del índice en `marca` permitió que MySQL pase de hacer un **escan
 
 
 # ✅ Ejercicio 6: Vistas
+
+Para este ejercicio volvimos a usar la base de datos que nos dio el profesor y como no hay una columna ventas tomamos en cuenta el stock (menos stock = mas vendidos)
 ```sql
+CREATE VIEW top_5_mas_vendidos_fake AS
 SELECT 
-    producto_id, 
-    SUM(total_cantidad) AS ventas_totales
-FROM vista_ventas_mensuales
-GROUP BY producto_id
-ORDER BY ventas_totales DESC
+    id,
+    nombre,
+    stock
+FROM 
+    productos
+ORDER BY 
+    stock ASC
 LIMIT 5;
+
 ```
 ---
 # ✅ Ejercicio 9: Backup y Restore
