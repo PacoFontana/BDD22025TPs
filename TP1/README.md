@@ -59,11 +59,80 @@ Error Code: 1452. Cannot add or update a child row: a foreign key constraint fai
 # ✅ Ejercicio 3: Concurrencia
 Ejercicio resuelto en clase
 ---
-Ejercicio 4: Plan de ejecucion
+# ✅ Ejercicio 4: Plan de ejecucion
 
 Para la base de datos con 100.000 registros vamos a usar la de productos que nos subio el profesor.
+```sql
+    SELECT count(*) FROM productos;
+```
+![image](https://github.com/user-attachments/assets/cee7b39e-b408-4741-8a4a-7b985fa043d2)
+
+
+# Análisis de rendimiento con `EXPLAIN` en MySQL
+
+## Consulta:
+```sql
+SELECT * FROM productos WHERE marca = 'Oscorp';
+```
 
 ---
+
+## Situación inicial: **Sin índice**
+
+### 🔎 Comando ejecutado:
+```sql
+EXPLAIN SELECT * FROM productos WHERE marca = 'Oscorp';
+```
+
+### 📋 Resultado:
+
+| Campo         | Valor       |
+|---------------|-------------|
+| `type`        | ALL         |
+| `possible_keys` | NULL     |
+| `key`         | NULL        |
+| `rows`        | 99171       |
+| `Extra`       | Using where |
+
+📉 **Rendimiento bajo**: Es ineficiente, especialmente en tablas grandes.
+
+---
+
+## 🛠 Mejora aplicada: **Creación del índice**
+```sql
+CREATE INDEX idx_marca ON productos(marca);
+```
+
+---
+
+## 🚀 Situación después: **Con índice creado**
+
+### 🔎 Comando ejecutado:
+```sql
+EXPLAIN SELECT * FROM productos WHERE marca = 'Oscorp';
+```
+
+### 📋 Resultado:
+
+| Campo         | Valor         |
+|---------------|---------------|
+| `type`        | ref           |
+| `possible_keys` | idx_marca   |
+| `key`         | idx_marca     |
+| `rows`        | 18340         |
+| `Extra`       | *(vacío)*     |
+
+
+**Rendimiento mejorado**: Gracias al índice, MySQL localiza los registros más rápido y con menos uso de recursos.
+
+---
+
+##  Conclusión
+
+La creación del índice en `marca` permitió que MySQL pase de hacer un **escaneo completo** a una **búsqueda optimizada usando índice**, reduciendo significativamente la cantidad de filas examinadas y mejorando la eficiencia de la consulta.
+
+---
+
 
 # ✅ Ejercicio 6: Vistas
 ```sql
