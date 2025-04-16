@@ -50,7 +50,8 @@ INSERT INTO Matriculas (estudiante_id, curso)
 VALUES (99, 'Bases de Datos');
 ```
 
-Esto nos va a dar el siguiente error:
-![image](https://github.com/user-attachments/assets/bffb028c-2954-43a3-8198-5cee9f76118e)
+Esto nos va a dar el siguiente error.:
+> ![image](https://github.com/user-attachments/assets/bffb028c-2954-43a3-8198-5cee9f76118e)
+Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (base-de-datos2.matriculas, CONSTRAINT matriculas_ibfk_1 FOREIGN KEY (estudiante_id) REFERENCES estudiantes (estudiante_id))
 
 
