@@ -53,11 +53,15 @@ VALUES (99, 'Bases de Datos');
 Esto nos va a dar el siguiente error.:
 > ![image](https://github.com/user-attachments/assets/bffb028c-2954-43a3-8198-5cee9f76118e)
 Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (base-de-datos2.matriculas, CONSTRAINT matriculas_ibfk_1 FOREIGN KEY (estudiante_id) REFERENCES estudiantes (estudiante_id))
-
+---
 # ✅ Ejercicio 3: Concurrencia
 Ejercicio resuelto en clase
+---
+Ejercicio 4: Plan de ejecucion
 
-# ✅ Ejercicio 8: Backup y Restore
+Para la base de datos con 100.000 registros vamos a usar la de productos que nos subio el profesor.
+---
+# ✅ Ejercicio 9: Backup y Restore
 <a href="https://drive.google.com/file/d/1oiAQmr0HCLfbwzfjGojo1P8ca0gl6n2M/view?usp=sharing" target="_blank">
   <img src="https://media.discordapp.net/attachments/1361782551143776257/1361910135194259557/image.png?ex=68007927&is=67ff27a7&hm=53304a89727d75262f32f75b607c11a6b34b73fa8563d392d958e0705f5f3896&=&format=webp&quality=lossless" alt="Ver Video" width="400"/>
 </a>
