@@ -61,6 +61,17 @@ Ejercicio 4: Plan de ejecucion
 
 Para la base de datos con 100.000 registros vamos a usar la de productos que nos subio el profesor.
 ---
+# ✅ Ejercicio 6: Vistas
+```sql
+SELECT 
+    producto_id, 
+    SUM(total_cantidad) AS ventas_totales
+FROM vista_ventas_mensuales
+GROUP BY producto_id
+ORDER BY ventas_totales DESC
+LIMIT 5;
+```
+---
 # ✅ Ejercicio 9: Backup y Restore
 <a href="https://drive.google.com/file/d/1oiAQmr0HCLfbwzfjGojo1P8ca0gl6n2M/view?usp=sharing" target="_blank">
   <img src="https://media.discordapp.net/attachments/1361782551143776257/1361910135194259557/image.png?ex=68007927&is=67ff27a7&hm=53304a89727d75262f32f75b607c11a6b34b73fa8563d392d958e0705f5f3896&=&format=webp&quality=lossless" alt="Ver Video" width="400"/>
