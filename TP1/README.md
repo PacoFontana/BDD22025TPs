@@ -151,6 +151,17 @@ LIMIT 5;
 
 ```
 ---
+# ✅ Ejercicio 7: Gestion de Permisos
+Para este ejercicio usariamos la base de datos creada anteriormente en el ejercicio 2 para darle permisos de solo lectura a un usuario especifico a partir de autorizacion solamente en las columnas que especificamos 
+
+```sql
+CREATE USER analista WITH PASSWORD 'analista123'
+GRANT SELECT ON estudiantes TO analista;
+GRANT SELECT ON matriculas TO analista;
+
+```
+---
+
 # ✅ Ejercicio 9: Backup y Restore
 <a href="https://drive.google.com/file/d/1oiAQmr0HCLfbwzfjGojo1P8ca0gl6n2M/view?usp=sharing" target="_blank">
   <img src="https://media.discordapp.net/attachments/1361782551143776257/1361910135194259557/image.png?ex=68007927&is=67ff27a7&hm=53304a89727d75262f32f75b607c11a6b34b73fa8563d392d958e0705f5f3896&=&format=webp&quality=lossless" alt="Ver Video" width="400"/>
