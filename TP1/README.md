@@ -98,14 +98,14 @@ EXPLAIN SELECT * FROM productos WHERE marca = 'Oscorp';
 
 ---
 
-## 🛠 Mejora aplicada: **Creación del índice**
+##  Mejora aplicada: **Creación del índice**
 ```sql
 CREATE INDEX idx_marca ON productos(marca);
 ```
 
 ---
 
-## 🚀 Situación después: **Con índice creado**
+##  Situación después: **Con índice creado**
 
 ### 🔎 Comando ejecutado:
 ```sql
