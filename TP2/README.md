@@ -1,7 +1,7 @@
 ## Ejercicio 1 - MongoDB
 
 ### 1) Crud basico.
-
+//SIEMPRE USAMOS EL USE EMPRESA POR ESO NO APARECE EN TODOS LOS CODIGOS
 ```javascript
 use empresa
 db.empleados.insertMany([
@@ -126,4 +126,29 @@ db.ventas.aggregate([
   }
 ]
 ```
+# Ejercicio 9 - Replicacion y sharding:
 
+
+Replica set: Se usa para mantener la integridad de la base de datos, es por decir "una copia exacta" de la base de datos pero en otro servidor, esto hace que ante la caida del servidor principal, pase el secundario a ser el nuevo principal y hace que no haya perdida de datos.
+
+Sharding: Fragmentacion traducido al español como su nombre nos indica lo que hace es tiene los datos distribuidos en distintos servidores, se usa generalmente en bases de datos muy grandes.
+
+## Ejercicio 10 - Seguridad y backups
+Primero hay que crear el usuurio administrador:
+```javascript
+use empresa
+db.createUser({
+  user: "admin",
+  pwd: "admin123",
+  roles: [{ role: "readWrite"}]
+})
+```
+Usamos el siguiente comando en la consola
+```javascript
+mongodump --db empresa --out /backups  //ruta del backup
+```
+Y para restaurar:
+```javascript
+mongorestore --db empresa /backups
+```
+Tambien se puede hacer un drop por si la base de datos ya existe
