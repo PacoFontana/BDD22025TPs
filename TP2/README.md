@@ -2,6 +2,7 @@
 
 ### 1) Crud basico.
 //SIEMPRE USAMOS EL USE EMPRESA POR ESO NO APARECE EN TODOS LOS CODIGOS
+//EN EL EJ 7 Y 8 USAMOS LA BD COLEGIO
 ```javascript
 use empresa
 db.empleados.insertMany([
@@ -126,8 +127,82 @@ db.ventas.aggregate([
   }
 ]
 ```
-# Ejercicio 9 - Replicacion y sharding:
+## Ejercicio 6 - Indices:
 
+Creamos la coleccion y le agregamos clientes:
+```javascript
+db.clientes.insertMany([
+  { nombre: "Juan", apellido: "Pérez" },
+  { nombre: "María", apellido: "González" },
+  { nombre: "Carlos", apellido: "Ramírez" },
+  { nombre: "Laura", apellido: "Fernández" },
+  { nombre: "Ana", apellido: "López" }
+])
+```
+Y a continuacion creamos el index:
+```javascript
+db.clientes.createIndex({ apellido: 1, nombre: 1 })
+```
+
+
+## Ejercicio 7 - Referencias:
+```javascript
+use universidad
+db.createCollection("cursos");
+db.createCollection("alumnos");
+```
+
+Insertamos cursos:
+```javascript
+db.cursos.insertMany([
+  { _id: ObjectId(), nombre: "Matemática" },
+  { _id: ObjectId(), nombre: "Historia" },
+  { _id: ObjectId(), nombre: "Programación" }
+])
+```
+Obtenemos el id de los cursos  con .find
+```javascript
+var idMatematica = db.cursos.findOne({ nombre: "Matemática" })._id;
+var idHistoria = db.cursos.findOne({ nombre: "Historia" })._id;
+var idProgramacion = db.cursos.findOne({ nombre: "Programación" })._id;
+```
+Y a continuacion ya podemos agregar los alumnos y ponerle los cursos haciendo referencia a las variables que ya contienen el id:
+```javascript
+db.alumnos.insertMany([
+  {
+    nombre: "Juan Pérez",
+    edad: 20,
+    cursos: [idMatematica, idProgramacion]
+  },
+  {
+    nombre: "Ana Gómez",
+    edad: 22,
+    cursos: [idHistoria]
+  },
+  {
+    nombre: "Carlos Ruiz",
+    edad: 21,
+    cursos: [idMatematica, idHistoria, idProgramacion]
+  }
+])
+```
+--
+## Ejercicio 8 - Uso de $lookup:
+```javascript
+db.alumnos.aggregate([
+  {
+    $lookup: {
+      from: "cursos",
+      localField: "cursos",
+      foreignField: "_id",
+      as: "alumno"
+    }
+  }
+])
+```
+---
+
+## Ejercicio 9 - Replicacion y sharding:
 
 Replica set: Se usa para mantener la integridad de la base de datos, es por decir "una copia exacta" de la base de datos pero en otro servidor, esto hace que ante la caida del servidor principal, pase el secundario a ser el nuevo principal y hace que no haya perdida de datos.
 
