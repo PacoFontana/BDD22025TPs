@@ -11,6 +11,8 @@ db.productos.aggregate([
         }
     }
 ])
+//Agrupa por cada categoria y opera con los precios 
+
 
 //Punto 2
 db.ventas.aggregate([
@@ -25,3 +27,4 @@ db.ventas.aggregate([
         $sort: { totalVentas: -1 }
     }
 ])
+//Agrupa por pais y cuenta la cantidad de transacciones y el total de ventas, lo ordena de mayor a menor (descendente)

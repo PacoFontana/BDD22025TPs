@@ -20,6 +20,7 @@ db.productos.aggregate([
             }
         }
 }]);
+//muestra el id, el nombre, la categoria, el precio y agrega un nuevo campo que tiene una condicion que dependiendo del precio toma x valor
 
 
 //Punto 2
@@ -42,3 +43,5 @@ db.ventas.aggregate([
         }
     }
 ]);
+
+//muestra el id, el cliente, el total y agrega un nuevo campo que tiene una condicion que dependiendo del total toma x valor

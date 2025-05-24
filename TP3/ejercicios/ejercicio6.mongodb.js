@@ -14,6 +14,8 @@ db.ventas.aggregate([
         }
     },
 ])
+// muestra el mes que mas ventas hubo
+
 
 //Punto 2
 db.ventas.aggregate([
@@ -35,3 +37,5 @@ db.ventas.aggregate([
         $limit: 1
     }
 ])
+
+// muestra el dia de la semana que mas ventas hubo

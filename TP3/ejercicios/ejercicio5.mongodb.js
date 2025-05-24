@@ -15,3 +15,5 @@ db.ventas.aggregate([
       totalVentas: { $sum: "$total" }
     }
 }])
+
+//hace un "join" entre vemtas y productos, y agrupa por categoria y total de ventas de cada categoria

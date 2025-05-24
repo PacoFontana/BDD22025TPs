@@ -15,3 +15,6 @@ db.productos.aggregate([
         $sort: { _id: 1 }
     }
 ])
+
+//Desarma cada valoracion y las agrupa por numero y cantidad de cada una
+//Ordena es orden ascendente

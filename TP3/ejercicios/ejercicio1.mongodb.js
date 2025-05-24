@@ -9,7 +9,7 @@ db.productos.aggregate([
         }
     }
 ])
-
+// Filtra por categoria electrónica y precio mayor a 500
 
 //Punto 2
 db.ventas.aggregate([
@@ -20,3 +20,4 @@ db.ventas.aggregate([
         }
     }
 ])
+//Filtra por el pais del clieente y el estado de la venta

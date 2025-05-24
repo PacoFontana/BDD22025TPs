@@ -11,6 +11,7 @@ db.productos.aggregate([
     }
   }
 ]);
+//Muestra de los productos solo el nombre. el precio y agrega el campo precioConImpuesto.
 
 //Punto 2
 db.ventas.aggregate([
@@ -23,3 +24,4 @@ db.ventas.aggregate([
         }
     }
 ])
+//Muestra el id de la venta, el nombre del cliente y el total de la venta. Agrega un campo que muestre el total con un descuento del 10% aplicado.

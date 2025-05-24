@@ -36,3 +36,5 @@ db.ventas.aggregate([
     }
   }
 ])
+
+//toma los 3 productos más vendidos y muestra su nombre, categoría, total de unidades vendidas, total de monto vendido y promedio de valoraciones
