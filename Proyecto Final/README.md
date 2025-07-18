@@ -4,6 +4,7 @@
 
 Sistema web realizado para el proyecto final de la materia Base de Datos II
 Biblioteca digital con funciones como buscar libros, gestionar prestamos, mostrar libros mas populares, etc
+Integrantes: Ansorena Pereira Ivo, Fontana Paco, Alvarado Ignacio, Ezequiel Wisniowski
 
 ## Arquitectura
 
