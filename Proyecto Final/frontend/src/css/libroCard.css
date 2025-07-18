@@ -1,0 +1,173 @@
+.libro-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  max-width: 350px;
+  min-height: 200px;
+}
+
+.libro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.libro-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.libro-titulo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.libro-isbn {
+  font-size: 12px;
+  color: #666;
+  background-color: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.libro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.libro-autor {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.libro-disponibles {
+  font-size: 14px;
+  color: #28a745;
+  margin: 0;
+  font-weight: 500;
+}
+
+.libro-id {
+  font-size: 12px;
+  color: #999;
+  margin: 8px 0 0 0;
+  border-top: 1px solid #f5f5f5;
+  padding-top: 8px;
+}
+
+.libro-id small {
+  font-family: 'Courier New', monospace;
+}
+
+.libro-genero {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.libro-actions {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-prestamo, .btn-confirmar, .btn-cancelar, .btn-no-disponible {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-prestamo {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-prestamo:hover {
+  background-color: #0056b3;
+}
+
+.btn-confirmar {
+  background-color: #28a745;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.btn-confirmar:hover {
+  background-color: #1e7e34;
+}
+
+.btn-confirmar:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.btn-cancelar {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-cancelar:hover {
+  background-color: #545b62;
+}
+
+.btn-no-disponible {
+  background-color: #dc3545;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.prestamo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-usuario {
+  width: 90%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.input-usuario:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .libro-card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .libro-titulo {
+    font-size: 16px;
+  }
+}
