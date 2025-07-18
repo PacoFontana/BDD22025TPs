@@ -61,6 +61,13 @@ Proyecto Final/
 - MongoDB
 - npm o yarn
 
+
+### DOTENV
+Archivo .env:
+MONGODB_URI=mongodb://localhost:27017/biblioteca
+
+PORT=3001
+
 ### Backend
 
 1. Navegar al directorio del backend:
