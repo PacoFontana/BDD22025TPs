@@ -159,15 +159,3 @@
   flex-direction: column;
   gap: 8px;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .libro-card {
-    max-width: 100%;
-    margin: 10px 0;
-  }
-  
-  .libro-titulo {
-    font-size: 16px;
-  }
-}

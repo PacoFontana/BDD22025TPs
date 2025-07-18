@@ -10,7 +10,6 @@ function SearchBar({ onSearchResults }) {
 
     const handleSearch = async () => {
         if (!searchTerm.trim()) {
-            // Si no hay término de búsqueda, obtener todos los libros
             try {
                 setLoading(true);
                 const response = await axios.get("http://localhost:3001/api/libros");

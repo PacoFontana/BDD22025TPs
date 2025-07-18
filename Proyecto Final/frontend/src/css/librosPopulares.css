@@ -1,0 +1,279 @@
+.libros-populares {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.populares-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popular-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ranking {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.libro-info {
+  flex: 1;
+}
+
+.titulo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.autor {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 4px 0;
+}
+
+.isbn {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+}
+
+.prestamos-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prestamos-count {
+  font-size: 24px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.prestamos-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.no-populares {
+  text-align: center;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 30px;
+  font-size: 16px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  padding: 40px;
+}
+
+.error {
+  text-align: center;
+  font-size: 16px;
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.populares-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popular-card {
+  background-color: #a4b6ca;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.ranking-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.posicion {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.libro-info {
+  flex: 1;
+}
+
+.titulo {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.autor {
+  font-size: 16px;
+  margin: 0 0 4px 0;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.isbn {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.8;
+  font-family: 'Courier New', monospace;
+}
+
+.prestamos-info {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.prestamos-count {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+    color: #070707;
+}
+
+.prestamos-label {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.no-populares {
+  text-align: center;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  padding: 40px;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.nota-explicativa {
+  margin-top: 30px;
+  padding: 16px;
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  border-radius: 8px;
+}
+
+.nota-explicativa p {
+  margin: 0;
+  color: #1565c0;
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.loading::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  text-align: center;
+  font-size: 16px;
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+}

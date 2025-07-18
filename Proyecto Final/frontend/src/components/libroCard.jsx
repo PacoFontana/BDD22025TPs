@@ -24,7 +24,6 @@ function LibroCard({ libro, onLibroUpdate }) {
       setShowPrestamoForm(false);
       setUsuario('');
       
-      // Actualizar el libro para reflejar la nueva cantidad disponible
       if (onLibroUpdate) {
         onLibroUpdate();
       }

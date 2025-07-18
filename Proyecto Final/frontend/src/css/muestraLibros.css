@@ -84,30 +84,3 @@
   margin: 20px auto;
   max-width: 500px;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .muestra-libros {
-    padding: 10px;
-  }
-  
-  .libros-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  
-  .titulo-seccion {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .titulo-seccion {
-    font-size: 20px;
-  }
-  
-  .libros-grid {
-    gap: 10px;
-  }
-}

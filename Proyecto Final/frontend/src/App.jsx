@@ -3,6 +3,7 @@ import "./css/App.css";
 import SearchBar from './components/searchBar.jsx';
 import MuestraLibros from './components/muestraLibros.jsx';
 import GestionPrestamos from './components/gestionPrestamos.jsx';
+import LibrosPopulares from './components/librosPopulares.jsx';
 
 function App() {
   const [searchResults, setSearchResults] = useState(null);
@@ -29,6 +30,12 @@ function App() {
         >
           Gestión de Préstamos
         </button>
+        <button 
+          className={`nav-button ${activeTab === 'populares' ? 'active' : ''}`}
+          onClick={() => setActiveTab('populares')}
+        >
+          Libros Populares
+        </button>
       </nav>
 
       {activeTab === 'libros' && (
@@ -40,6 +47,10 @@ function App() {
 
       {activeTab === 'prestamos' && (
         <GestionPrestamos />
+      )}
+
+      {activeTab === 'populares' && (
+        <LibrosPopulares />
       )}
     </div>
   );

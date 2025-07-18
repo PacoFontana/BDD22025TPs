@@ -33,7 +33,7 @@ function GestionPrestamos() {
     try {
       const response = await axios.patch(`http://localhost:3001/api/prestamos/${prestamoId}`);
       alert('Libro devuelto con éxito');
-      fetchPrestamos(); // Recargar la lista
+      fetchPrestamos();
     } catch (error) {
       alert(error.response?.data?.error || 'Error al devolver el libro');
     }

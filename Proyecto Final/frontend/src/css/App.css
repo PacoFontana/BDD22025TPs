@@ -17,11 +17,14 @@ body {
 
 .navigation {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin: 20px 0;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 10px 20px;
     border-radius: 12px;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .nav-button {
@@ -29,14 +32,16 @@ body {
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-size: 14px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 8px;
+    min-width: 140px;
+    justify-content: center;
 }
 
 .nav-button:hover {

@@ -22,7 +22,6 @@ function MuestraLibros({ searchResults }) {
       }
     };
 
-    // Solo cargar todos los libros si no hay resultados de búsqueda
     if (searchResults === null) {
       fetchLibros();
     } else {
@@ -30,7 +29,6 @@ function MuestraLibros({ searchResults }) {
     }
   }, [searchResults]);
 
-  // Usar resultados de búsqueda si están disponibles, sino usar todos los libros
   const librosAMostrar = searchResults !== null ? searchResults : libros;
   const esBusqueda = searchResults !== null;
 
@@ -66,9 +64,7 @@ function MuestraLibros({ searchResults }) {
             key={libro._id} 
             libro={libro} 
             onLibroUpdate={() => {
-              // Recargar libros después de un préstamo
               if (searchResults === null) {
-                // Si no hay búsqueda activa, recargar todos los libros
                 const fetchLibros = async () => {
                   try {
                     const response = await axios.get("http://localhost:3001/api/libros");
